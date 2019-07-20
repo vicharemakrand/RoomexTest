@@ -1,0 +1,17 @@
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Roomex.UnitTest.deps.json
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Roomex.UnitTest.runtimeconfig.json
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Roomex.UnitTest.runtimeconfig.dev.json
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Roomex.UnitTest.dll
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.csprojAssemblyReference.cache
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.csproj.CoreCompileInputs.cache
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.AssemblyInfoInputs.cache
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.AssemblyInfo.cs
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\Roomex.UnitTest.pdb
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\RoomexTest.dll
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\bin\Debug\netcoreapp2.2\RoomexTest.pdb
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.csproj.CopyComplete
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.dll
+D:\codepractice-prj\Roomex-MakVichare-Test\Roomex.UnitTest\obj\Debug\netcoreapp2.2\Roomex.UnitTest.pdb
