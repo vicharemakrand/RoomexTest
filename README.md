@@ -30,3 +30,5 @@ things can be improved :
 3. Integration tests - wrote for the controller
 
 4. Use of IOC - to save time - did not implemented
+
+5. api url is hardcoded in the app.service.ts
