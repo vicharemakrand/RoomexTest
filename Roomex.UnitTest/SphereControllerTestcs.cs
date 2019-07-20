@@ -5,6 +5,7 @@ using RoomexTest.CalculationStrategies;
 using RoomexTest.CalculationStrategies.Validators;
 using RoomexTest.Controllers;
 using RoomexTest.ViewModel;
+using System;
 
 namespace Roomex.UnitTest
 {
@@ -46,7 +47,7 @@ namespace Roomex.UnitTest
             ActionResult<ResponseResult> response = controller.GetDistanceByStrategy1(unit, latA, lonA, latB, lonB) ;
 
             Assert.IsTrue(response.Value.IsSucceed );
-            Assert.AreEqual(5525.1390015947527, response.Value.Result);
+            Assert.AreEqual(5525.14, Math.Round(response.Value.Result, 2));
         }
 
         [TestMethod]
@@ -62,7 +63,7 @@ namespace Roomex.UnitTest
             ActionResult<ResponseResult> response = controller.GetDistanceByStrategy2(unit, latA, lonA, latB, lonB);
 
             Assert.IsTrue(response.Value.IsSucceed);
-            Assert.AreEqual(939.417988949354, response.Value.Result);
+            Assert.AreEqual(939.42, Math.Round(response.Value.Result,2));
         }
 
     }
