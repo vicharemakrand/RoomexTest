@@ -1,0 +1,96 @@
+<!-- main app container -->
+<div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="text-center">Roomex Test Developed by Makarand Vichare</h2>
+                    <br/><br/>
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+<table class="table">
+    <tr>
+      <td>Point A :</td>
+      <td >
+          <input type="number" class="form-control" name="pointALang" [(ngModel)]="model.pointALang" 
+                        #pointALang="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pointALang.invalid }" required />
+                        <div *ngIf="f.submitted && pointALang.invalid" class="invalid-feedback">
+                            <div *ngIf="pointALang.errors.required">Point A langitute is required</div>
+                        </div>
+      </td>
+      <td >
+          <input type="number" class="form-control" name="pointALong" [(ngModel)]="model.pointALong" 
+                        #pointALong="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pointALong.invalid }" required />
+                        <div *ngIf="f.submitted && pointALong.invalid" class="invalid-feedback">
+                            <div *ngIf="pointALong.errors.required">Point A longitute is required</div>
+                        </div>
+      </td>
+    </tr>
+    <tr>
+        <td>Point B :</td>
+        <td >
+            <input type="number" class="form-control" name="pointBLang" [(ngModel)]="model.pointBLang" 
+                        #pointBLang="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pointBLang.invalid }" required />
+                        <div *ngIf="f.submitted && pointBLang.invalid" class="invalid-feedback">
+                            <div *ngIf="pointBLang.errors.required">Point B langitute is required</div>
+                        </div>
+        </td>
+        <td>
+            <input type="number" class="form-control" name="pointBLong" [(ngModel)]="model.pointBLong" 
+                        #pointBLong="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pointBLong.invalid }" required />
+              <div *ngIf="f.submitted && pointBLong.invalid" class="invalid-feedback">
+                  <div *ngIf="pointBLong.errors.required">Point B longitute is required</div>
+              </div>
+        </td>
+      </tr>
+      <tr>
+          <td>Unit :</td>
+          <td>
+              <div>
+              <span >
+                    <input type="radio" name="unit" [(ngModel)]="model.unit" 
+                    #unit="ngModel" name="unitGroup" value="km" [ngClass]="{ 'is-invalid': f.submitted && unit.invalid }" required />
+              </span>
+              <span>Km</span>
+            </div>
+          </td>
+          <td>
+                <span >
+                        <input type="radio" name="unit" [(ngModel)]="model.unit" 
+                        #unit="ngModel" name="unitGroup" value="mile" [ngClass]="{ 'is-invalid': f.submitted && unit.invalid }" required />          
+                </span>
+                <span>Mile</span>
+          </td>
+        </tr>
+        <tr>
+            <td>Strategies :</td>
+            <td>
+                <input type="radio" name="strategy" [(ngModel)]="model.strategy" 
+                #strategy="ngModel" name="strategyGroup" value="Strategy1" [ngClass]="{ 'is-invalid': f.submitted && strategy.invalid }" required /> Strategy 1
+            </td>
+            <td>
+                <input type="radio"  name="strategy" [(ngModel)]="model.strategy" 
+                #strategy="ngModel" name="strategyGroup" value="Strategy2" [ngClass]="{ 'is-invalid': f.submitted && strategy.invalid }" required />Strategy 2
+            </td>
+        </tr>
+    <tr>
+      <td colspan="3">
+          <div class="text-center">
+                <button class="btn btn-primary" >Calculate</button>
+          </div>
+        </td>
+    </tr>
+    <tr *ngIf="!processing && message.length ==0">
+        <td class="text-center" colspan="3">Calculated distance : {{result | number : '1.2-2' }} {{model.unit}}</td>
+    </tr>
+    <tr *ngIf="!processing && message.length>0">
+        <td class="text-center alert alert-danger" colspan="3">
+           <div>Validation Summary  :</div>
+            <div >{{message}}</div>
+        </td>
+    </tr>
+
+  </table>
+</form>
+</div>  
+</div>  
+</div>  
+</div>  

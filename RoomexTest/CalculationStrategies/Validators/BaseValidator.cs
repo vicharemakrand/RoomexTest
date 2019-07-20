@@ -25,36 +25,10 @@ namespace RoomexTest.CalculationStrategies.Validators
             {
                 message.AppendLine("Invalid point A");
             }
-            else
-            {
-                if (viewModel.PointA.Latitude > 180 || viewModel.PointA.Latitude < -180)
-                {
-                    message.AppendLine("Invalid Latitude for point A");
-                }
-
-                if (viewModel.PointA.Longitute > 180 || viewModel.PointA.Longitute < -180)
-                {
-                    message.AppendLine("Invalid Longitute for point A");
-                }
-            }
 
             if (viewModel.PointB == null)
             {
                 message.AppendLine("Invalid point B");
-            }
-            else
-            {
-                if (viewModel.PointB.Latitude > 180 || viewModel.PointB.Latitude < -180)
-                {
-                    message.AppendLine("Invalid Latitude for point B");
-                }
-
-
-                if (viewModel.PointB.Longitute > 180 || viewModel.PointB.Longitute < -180)
-                {
-                    message.AppendLine("Invalid Longitute for point B");
-                }
-
             }
 
             if (message.Length > 0)

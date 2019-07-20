@@ -16,8 +16,8 @@ namespace RoomexTest.Controllers
     public class SphereController : ControllerBase
     {
 
-
-        [HttpGet("Strategy1/GetDistance/{unit}/{latA:double}/{lonA:double}/{latB:double}/{lonB:double}")]
+      
+        [HttpGet("Strategy1/GetDistance")]
         public ActionResult<ResponseResult> GetDistanceByStrategy1(string unit, double latA, double lonA, double latB, double lonB)
         {
             var viewModel = new Strategy1ViewModel
@@ -33,7 +33,7 @@ namespace RoomexTest.Controllers
             return calculator.CalculateDistance(viewModel);
         }
 
-        [HttpGet("Strategy2/GetDistance/{unit}/{latA:double}/{lonA:double}/{latB:double}/{lonB:double}")]
+        [HttpGet("Strategy2/GetDistance")]
         public ActionResult<ResponseResult> GetDistanceByStrategy2(string unit, double latA, double lonA, double latB, double lonB)
         {
             var viewModel = new Strategy2ViewModel
