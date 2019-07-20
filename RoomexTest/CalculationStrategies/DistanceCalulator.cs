@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RoomexTest.CalculationStrategies
 {
-    public class DistanceCalulator
+    public class DistanceCalulator : IDistanceCalulator
 
     {
 
@@ -27,10 +27,10 @@ namespace RoomexTest.CalculationStrategies
             switch (viewModel.Unit)
             {
                 case "km":
-                {
-                    result= CalculateDistanceInKM(viewModel);
-                    break;
-                }
+                    {
+                        result = CalculateDistanceInKM(viewModel);
+                        break;
+                    }
                 case "mile":
                     {
                         result = CalculateDistanceInMile(viewModel);
@@ -43,7 +43,7 @@ namespace RoomexTest.CalculationStrategies
 
         private ResponseResult CalculateDistanceInKM(BaseStrategyViewModel viewModel)
         {
-                return _strategy.CalculateDistanceInKM(viewModel);
+            return _strategy.CalculateDistanceInKM(viewModel);
         }
 
         private ResponseResult CalculateDistanceInMile(BaseStrategyViewModel viewModel)

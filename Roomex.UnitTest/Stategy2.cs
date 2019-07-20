@@ -7,13 +7,13 @@ using RoomexTest.ViewModel;
 namespace Roomex.UnitTest
 {
     [TestClass]
-    public class Stategy1Test
+    public class Stategy2Test
     {
-        private IStrategy1 strategy1;
+        private IStrategy2 strategy1;
 
-        private Mock<IStrategy1Validator> validator;
+        private Mock<IStrategy2Validator> validator;
 
-        private Strategy1ViewModel viewModel;
+        private Strategy2ViewModel viewModel;
 
         private ResponseResult validResponse;
         private ResponseResult inValidResponse;
@@ -21,10 +21,10 @@ namespace Roomex.UnitTest
         [TestInitialize]
         public void Initialize()
         {
-            validator = new Mock<IStrategy1Validator>();
-            strategy1 = new Strategy1(validator.Object);
+            validator = new Mock<IStrategy2Validator>();
+            strategy1 = new Strategy2(validator.Object);
 
-            viewModel = new Strategy1ViewModel
+            viewModel = new Strategy2ViewModel
             {
                 PointA = new CoordinateViewModel { Latitude =32.3,Longitute=43.34},
                 PointB = new CoordinateViewModel { Latitude = 82.3332443, Longitute = -43.3886 },
@@ -45,7 +45,7 @@ namespace Roomex.UnitTest
         {
             //Arrange 
 
-            validator.Setup(a => a.Validate(It.IsAny<Strategy1ViewModel>())).Returns(validResponse);
+            validator.Setup(a => a.Validate(It.IsAny<Strategy2ViewModel>())).Returns(validResponse);
 
             var response = strategy1.CalculateDistanceInKM(viewModel);
             Assert.IsTrue(response.IsSucceed);
@@ -58,7 +58,7 @@ namespace Roomex.UnitTest
 
             viewModel.PointA = null;
 
-            validator.Setup(a => a.Validate(It.IsAny<Strategy1ViewModel>())).Returns(inValidResponse);
+            validator.Setup(a => a.Validate(It.IsAny<Strategy2ViewModel>())).Returns(inValidResponse);
 
             var response = strategy1.CalculateDistanceInKM(viewModel);
 
@@ -69,13 +69,13 @@ namespace Roomex.UnitTest
 
 
         [TestMethod]
-        public void CalculateDistanceInMile_InValidUnit_returnsSucceedIsFalse()
+        public void CalculateDistanceInMile_InValidEarthRadiuLessThan0_returnsSucceedIsFalse()
         {
             //Arrange 
 
-            viewModel.Unit = null;
+            viewModel.EarthRadius = 0;
 
-            validator.Setup(a => a.Validate(It.IsAny<Strategy1ViewModel>())).Returns(inValidResponse);
+            validator.Setup(a => a.Validate(It.IsAny<Strategy2ViewModel>())).Returns(inValidResponse);
 
             var response = strategy1.CalculateDistanceInMile(viewModel);
 
